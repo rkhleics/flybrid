@@ -2,7 +2,7 @@
 
 A new approach for achieving 'fluid-hybrid' layouts in HTML emails, without the horrible conditional `<table>` code or `<div>` elements that are only used by certain email clients, or the potentially confusing switch to using CSS `min-width` and `max-width` rules to control column widths.
 
-For those who don't know, 'fluid-hybrid' email design is an approach for acheiving 'stacking' of multi-column layouts, without the use media queries. For those email clients that DO support media queries, additional styles are used to progressively enhance how the columns resize for users of those clients.
+For those who don't know, 'fluid-hybrid' email design is an approach for achieving 'stacking' of multi-column layouts, without the use media queries. For those email clients that DO support media queries, additional styles are used to progressively enhance how the columns resize for users of those clients.
 
 ## Does it even work?
 
