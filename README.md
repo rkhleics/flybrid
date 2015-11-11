@@ -14,6 +14,8 @@ Download yourself a copy and look at `commented.html` in the `html` directory. I
 Before sending your email, it's intended that you use a CSS-Inliner tool to inline your CSS. `flybrid` has been developed using the following inliner tool from Campaign Monitor to prepare HTML before sending tests. Some CSS-Inliner tools work differently. So, for peace of mind, you'll probably want to use this too:
 https://inliner.cm/
 
+Whatever technique you use to create your email. **ALWAYS TEST YOUR CODE BEFORE SENDING**.
+
 ## Contributors
 
 **[Andy Babic](http://twitter.com/andyjbabic "I'm on twitter")**, developer at [Rock Kitchen Harris](https://www.rkh.co.uk)
