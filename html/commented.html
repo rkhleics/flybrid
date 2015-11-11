@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style type="text/css">
+        /* Reset styles */
+        html, body {
+            padding:0;
+            margin:0; 
+        }
+        html, body, #wrapper {
+            background-color: #444444;
+        }
+        #outlook a {
+          padding: 0;
+        }
+        body {
+          Margin: 0;
+          padding: 0;
+          -webkit-text-size-adjust: 100%;
+          -ms-text-size-adjust: 100%;
+        }
+        .ExternalClass {
+          width: 100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass th,
+        .ExternalClass div {
+          line-height: 100%;
+        }
+        #backgroundTable {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          line-height: 100%;
+        }
+        img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          outline-style: none;
+          text-decoration: none;
+          -ms-interpolation-mode: bicubic;
+        }
+        a img {
+          border-style: none;
+        }
+        tr {
+          border-collapse: collapse;
+        }
+        td, th {
+          vertical-align: top;
+        }
+
+        /* Text styles */
+        .text {
+            background: #ffffff;
+            font-size: 16px;
+            font-family: arial, sans-serif;
+            text-align: center;
+            padding: 20px 12px;
+        }
+
+        /* Layout styles */
+        .container {
+            max-width: 600px;
+        }
+        
+        .column {
+            padding: 10px;
+        }
+
+        /* Flybrid styles */ 
+        .flybrid-container {
+            padding: 10px;
+            text-align: center;
+        }
+        .flybrid,
+        .flybrid > tbody {
+            display: block;
+            vertical-align: middle;
+            font-size: 0px;
+            line-height: 0px;
+        }
+        .flybrid > tbody > tr {
+            display: inline;
+        }
+        .flybrid > tbody > tr > th {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        @media screen and (min-width:1px) {
+            /* For any clients that support media queries, we override the cell
+            widths to percentages, so that they stretch to fit. Much nicer! */
+            .flybrid.four-cols > tbody > tr > th {
+                width: 25% !important;
+            }
+            .flybrid.three-cols > tbody > tr > th {
+                width: 33.33% !important;
+            }
+            .flybrid.two-cols > tbody > tr > th {
+                width: 50% !important;
+            }
+        }
+
+        @media screen and (max-width:560px) {
+            /* Here, we adjust the left and right padding slightly to give
+            the columns more room on smaller displays. */
+            .flybrid-container {
+                padding-left: 6px !important;
+                padding-right: 6px !important;
+            }
+            /* We also prevent quarter are third width cols becoming too
+            'squished' by diving them a bigger portion of the display area. */
+            .flybrid.four-cols > tbody > tr > th {
+                width: 50% !important;
+            }
+            .flybrid.three-cols > tbody > tr > th {
+                width: 50% !important;
+            }
+            /* Since half width cols are wider natrually, as the display area
+            becomes narrower, we'll let them become 100% wide earlier. */
+            .flybrid.two-cols > tbody > tr > th {
+                display: block !important;
+                width: auto !important;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            /* Here we adjust the left and right padding a little bit more */
+            .flybrid-container {
+                padding-left: 3px !important;
+                padding-right: 3px !important;
+            }
+            /* Here, we make all flybrid columns 100% width, no matter the
+            original size. */
+            .flybrid.flybrid > tbody > tr > th {
+                display: block !important;
+                width: auto !important;
+            }
+        }
+    </style>
+<!--[if gte mso 9]><xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+</xml><![endif]-->
+</head>
+<body>
+    <table border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%"> 
+        <tr>
+            <td align="center" id="wrapper">
+                <!--[if (gte mso 9)|(IE)]>
+                  <table border="0" cellpadding="0" cellspacing="0" width="600" align="center">
+                    <tr>
+                      <td>
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" class="container" width="100%">
+                   
+                    <tr>
+                        <td width="100%" height="25" bgcolor="#888888"></td>
+                    </tr>
+                    <tr>
+                        <td class="flybrid-container">
+                        <!-- 
+
+                            1) We start with a cell with class `.flybrid-container`, which takes care of the alignment
+                               of cells when they start to stack, and provides some padding to make the space around and
+                               between columns nice and consistent. If you want to alter this spacing, or ditch it all
+                               together, you can easily update the CSS entries for `.flybrid-container` and `.column` in
+                               the head, and adjust the width of your `<th>` elemenets to make the most of the space.
+                               Don't forget to alter the overrides withing media queries too.
+
+                            2) Inside the the .`flybrid-container` cell, we add a standard `<table>` with the `flybrid`
+                               class added to it (just like the one below).
+
+                            3) You also need to add a `<tbody>` inside the flybrid `<table>`, and you need to add all
+                               of your rows and columns within that. This is required so that we can reliably target
+                               elements using `direct descendant` CSS selectors. You can still abandon the use of
+                               `<tbody>` elsewhere, but it needs to be there on your `.flybrid` tables.
+
+                        -->
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid four-cols" width="100%">
+                                <tbody><tr>
+                                    <th width="145" style="width:145px;">
+                                    <!-- 
+
+                                        This is just a standard table cell, like you're used to using for layout. The only
+                                        differences are:
+
+                                        4) You use <th> instead of <td>. This is required to make the the stock email client
+                                           on Android 4.4 (KitKat) devices respect the styles we're going to apply to them.
+
+                                        5) You need to apply pixel width values (not percentages) to each column of your 
+                                           `.flybrid` <table>. You're going to override these widths within media queries
+                                           to make them nice and flexible on different devices, but in your HTML, just
+                                           focus on using the correct widths for your `desktop` design.
+                                        
+                                        6) You need to apply width using the `width` attribute AND by adding  a `style`
+                                           attribute specifying the same width. The `width` attribute is for the less
+                                           capable email clients, and will work while the table structure is still
+                                           intact. The width value in the `style` attribute will be used when the table
+                                           structure breaks down, and the cells become 'inline-block' elements. 
+
+                                        7) Don't introduce any padding at this level. If you want to add padding to your
+                                           columns, nest another table within each `<th>`, and apply padding within that,
+                                           like we do in this example with the `.column` class.
+
+                                    -->
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><!-- 
+
+                                        8) A bug introduced to the Apple's Mail app in iOS9 means that you need to
+                                           eliminate any space between your opening and closing `<th>` elements and
+                                           `<tr>` elements within your `.flybrid` table. If not, the Mail app will
+                                           add additional spacing between your cells, and force them to stack
+                                           unnecessarily.
+
+                                    --><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th></tr><tr><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" height="25" bgcolor="#888888"></td>
+                    </tr>
+                    <tr>
+                        <td class="flybrid-container">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid three-cols" width="100%">
+                                <tbody><tr>
+                                    <th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th></tr><tr><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" width="100%" height="25" bgcolor="#888888"></td>
+                    </tr>
+                    <tr>
+                        <td class="flybrid-container">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid two-cols" width="100%">
+                                <tbody><tr>
+                                    <th width="290" style="width:290px;" align="center">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Half
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="290" style="width:290px">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Half
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th></tr><tr><th width="290" style="width:290px">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Half
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="290" style="width:290px">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Half
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" height="25" bgcolor="#888888"></td>
+                    </tr>
+                </table>
+                <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                    </tr>
+                </table>
+                <![endif]-->
+            </td>      
+        </tr>
+  
+    </table>
+</body>
+</html>
