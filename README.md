@@ -1,6 +1,6 @@
 # What is flybrid?
 
-A new approach to creating 'fluid-hybrid' layouts in HTML emails, without the horrible conditional `<table>` code or `<div>`s that are only used by certain email clients, or the potentially confusing switch to using CSS `min-width` and `max-width` rules to control column widths.
+A new approach to creating 'fluid-hybrid' layouts in HTML emails, without the horrible conditional `<table>` code or `<div>` elements that are only used by certain email clients, or the potentially confusing switch to using CSS `min-width` and `max-width` rules to control column widths.
 
 # How do I use it?
 
