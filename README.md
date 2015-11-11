@@ -4,11 +4,9 @@ A new approach to creating 'fluid-hybrid' layouts in HTML emails, without the ho
 
 ## Does it even work?
 
-Before sending your email, it's intended that you use a CSS-Inliner to inline your CSS. Flybrid has been developed using the following inliner from Campaign Monitor:
+Before sending your email, it's intended that you use a CSS-Inliner to inline your CSS. Flybrid has been developed using the following inliner from Campaign Monitor to prepare HTML before sending tests. Some CSS-Inliner tools work in different ways, so for peace of mind, you'll probably want to use this too:
 
 https://inliner.cm/
-
-Some CSS-Inliner tools work in different ways, so for peace of mind, you'll probably want to use that too.
 
 Litmus test results for the current code can be found at:
 
