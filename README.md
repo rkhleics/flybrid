@@ -1,13 +1,12 @@
 # What is flybrid?
 
-A new approach for achieving 'fluid-hybrid' layouts in HTML emails, without the horrible conditional `<table>` code or `<div>` elements that are only used by certain email clients, or the potentially confusing switch to using CSS `min-width` and `max-width` rules to control column widths.
+It's a demonstration and explaination of an approach for achieving 'fluid-hybrid' layouts in HTML emails, without any horrible conditional `<table>` code or `<div>` elements that are only used by certain email clients, or the potentially confusing switch to using CSS `min-width` and `max-width` rules to control column widths.
 
-For those who don't know, 'fluid-hybrid' email design is an approach for achieving 'stacking' of multi-column layouts, without the use media queries (primarily, to produce a better result for Gmail users). For those email clients that DO support media queries, additional styles are used to progressively enhance how the columns resize for users of those clients.
+For those who don't know, 'fluid-hybrid' is a term used to describe an approach for achieving multi-column layouts that 'stack' nicely on smaller screens, without the use `@media` queries, but with `@media` queries used to 'progressively enhance' the experience in email clients that support them.
 
 ## Does it even work?
 
-Yes. Litmus test results for the current code can be found at:
-https://litmus.com/checklist/public/d7cf1a7
+Yes, it does. Or, at least the HTML examples provided in `commented.html` and `uncommented.html` all work as expected. Litmus test results for the current code can be found at: https://litmus.com/checklist/public/d7cf1a7
 
 ## How do I use it?
 
