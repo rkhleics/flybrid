@@ -16,6 +16,10 @@ https://litmus.com/checklist/public/d7cf1a7
 
 Download yourself a copy and look at `commented.html` in the `html` directory. It's both a working example, and a guide. Follow the 8 rules explained within the comments, and you should know enough to modify the supplied code and use the technique within your own emails.
 
+## Contributors
+
+**[Andy Babic](http://twitter.com/andyjbabic "I'm on twitter")**, developer at [Rock Kitchen Harris](https://www.rkh.co.uk)
+
 ## Building on the great work by
 
  **Nicole Merlin** at Email Wizardry and her approach explained in the following article: http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
