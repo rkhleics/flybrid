@@ -79,10 +79,12 @@
             padding: 10px;
         }
 
-        /* Flybrid styles */ 
+        /* Flybrid styles */
         .flybrid-container {
-            padding: 10px;
             text-align: center;
+        }
+        .flybrid-container.padded {
+            padding: 10px;
         }
         .flybrid,
         .flybrid > tbody {
@@ -97,6 +99,7 @@
         .flybrid > tbody > tr > th {
             display: inline-block;
             overflow: hidden;
+            max-width: 100%;
         }
 
         @media screen and (min-width:1px) {
@@ -109,10 +112,16 @@
             .flybrid.two-cols > tbody > tr > th {
                 width: 50% !important;
             }
+            .flybrid > tbody > tr > th.side-col {
+                width: 35% !important;
+            }
+            .flybrid > tbody > tr > th.content-col {
+                width: 65% !important;
+            }
         }
 
         @media screen and (max-width:560px) {
-            .flybrid-container {
+            .flybrid-container.padded {
                 padding-left: 6px !important;
                 padding-right: 6px !important;
             }
@@ -126,10 +135,16 @@
                 display: block !important;
                 width: auto !important;
             }
+
+            .flybrid > tbody > tr > th.side-col,
+            .flybrid > tbody > tr > th.content-col {
+                display: block !important;
+                width: auto !important;
+            }
         }
 
         @media screen and (max-width:400px) {
-            .flybrid-container {
+            .flybrid-container.padded {
                 padding-left: 3px !important;
                 padding-right: 3px !important;
             }
@@ -156,15 +171,265 @@
                       <td>
                 <![endif]-->
                 <table border="0" cellpadding="0" cellspacing="0" class="container" width="100%">
-                   
+                    <tr>
+                        <td width="100%" height="25" bgcolor="#888888"></td>
+                    </tr>
+                    <tr>
+                        <td class="flybrid-container padded">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid two-cols" width="100%">
+                                <tbody><tr>
+                                    <th width="290" style="width:290px;" align="center">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Half
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="290" style="width:290px">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Half
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th></tr><tr><th width="290" style="width:290px">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Half
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="290" style="width:290px">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Half
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
                     <tr>
                         <td width="100%" height="25" bgcolor="#888888"></td>
                     </tr>
                     <tr>
                         <td class="flybrid-container">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid two-cols" width="100%">
+                                <tbody><tr>
+                                    <th width="300" style="width:300px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="text">
+                                                    Half (no padding)
+                                                </td>
+                                            </tr>
+                                        </table>
+                                               
+                                    </th><th width="300" style="width:300px">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="text" style="background-color:#e1e1e1;">
+                                                    Half (no padding)
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th></tr><tr><th width="300" style="width:300px">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="text" style="background-color:#e1e1e1;">
+                                                    Half (no spacing)
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="300" style="width:300px">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="text">
+                                                    Half (no spacing)
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" height="25" bgcolor="#888888"></td>
+                    </tr>
+                     <tr>
+                        <td class="flybrid-container padded">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid" width="100%">
+                                <tbody><tr>
+                                    <th width="220" style="width:200px;" class="side-col">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text" style="background-color:#e1e1e1;">
+                                                                .side-col
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="380" style="width:380px;" class="content-col">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                .content-col
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" height="25" bgcolor="#888888"></td>
+                    </tr>
+                    <tr>
+                        <td class="flybrid-container padded">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid three-cols" width="100%">
+                                <tbody><tr>
+                                    <th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th></tr><tr><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" height="25" bgcolor="#888888"></td>
+                    </tr>
+                    <tr>
+                        <td class="flybrid-container padded">
+                        
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid four-cols" width="100%">
                                 <tbody><tr>
                                     <th width="145" style="width:145px;">
+                                    
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
                                                 <td class="column">
@@ -282,172 +547,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td width="100%" height="25" bgcolor="#888888"></td>
-                    </tr>
-                    <tr>
-                        <td class="flybrid-container">
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid three-cols" width="100%">
-                                <tbody><tr>
-                                    <th width="193" style="width:193px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Third
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th><th width="193" style="width:193px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Third
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th><th width="193" style="width:193px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Third
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th></tr><tr><th width="193" style="width:193px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Third
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th><th width="193" style="width:193px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Third
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th><th width="193" style="width:193px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Third
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th>
-                                </tr></tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
                         <td colspan="3" width="100%" height="25" bgcolor="#888888"></td>
                     </tr>
-                    <tr>
-                        <td class="flybrid-container">
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid two-cols" width="100%">
-                                <tbody><tr>
-                                    <th width="290" style="width:290px;" align="center">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Half
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th><th width="290" style="width:290px">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Half
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th></tr><tr><th width="290" style="width:290px">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Half
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th><th width="290" style="width:290px">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                Half
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th>
-                                </tr></tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="100%" height="25" bgcolor="#888888"></td>
-                    </tr>
+                    
                 </table>
                 <!--[if (gte mso 9)|(IE)]>
                       </td>
