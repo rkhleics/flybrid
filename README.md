@@ -6,7 +6,7 @@ For those who don't know, 'fluid-hybrid' is an HTML email design term used to de
 
 ## Does it even work?
 
-Yes, it does. Or, at least the HTML examples provided in `commented.html` and `uncommented.html` all work as expected. Litmus test results for the current code can be found at: https://litmus.com/pub/dcd634b
+Yes, it does. Or, at least the HTML examples provided in `commented.html` and `uncommented.html` all work as expected. Litmus test results for the current code can be found at: https://litmus.com/pub/395acb8
 
 ## How do I use it?
 
