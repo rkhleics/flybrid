@@ -175,6 +175,13 @@
                 width: 100% !important;
             }
         }
+
+        @media yahoo {
+            /* Yahoo seems to want to add a 1px space around each cell. This
+            fix removes that space in everything but IE10 and IE11 viewing the
+            Yahoo webmail client. */
+            .flybrid > tbody > tr > th { margin: -1px !important; }
+        }
     </style>
 <!--[if gte mso 9]><xml>
     <o:OfficeDocumentSettings>
@@ -403,7 +410,7 @@
                             -->
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid" width="100%">
                                 <tbody><tr>
-                                    <th width="220" style="width:200px;" class="side-col">
+                                    <th width="200" style="width:200px;" class="side-col">
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
                                                 <td class="column">
