@@ -12,7 +12,7 @@ Flybrid essentially provides the same results in the same email clients, but has
 
 ## Does it even work?
 
-Yes, it does. Or, at least the HTML examples provided in `commented.html` and `uncommented.html` all work as expected. Design test results for the current code can be found at: https://www.emailonacid.com/app/acidtest/display/summary/X9Omvx3aq712ffiMtfB7LBaB0VMJAM4zOh1mcw10ybmRK/shared
+Yes, it does. Or, at least the HTML examples provided in `commented.html` and `uncommented.html` all work as expected. Design test results for the current code can be found at: https://www.emailonacid.com/app/acidtest/display/summary/mEij5Ut9L4cO8jkwUuu3FfMLn4RIIkc8JMdMg9JZDTIcO/shared
 
 ## How do I use it?
 
