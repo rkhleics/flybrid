@@ -9,21 +9,22 @@
     <title></title>
     <style type="text/css">
         /* Reset styles */
-        html, body {
+        html {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #444444;
             padding:0;
             margin:0; 
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
         }
-        html, body, #wrapper {
+        #wrapper {
             background-color: #444444;
         }
         #outlook a {
           padding: 0;
-        }
-        body {
-          Margin: 0;
-          padding: 0;
-          -webkit-text-size-adjust: 100%;
-          -ms-text-size-adjust: 100%;
         }
         .ExternalClass {
           width: 100%;
@@ -51,9 +52,6 @@
           text-decoration: none;
           -ms-interpolation-mode: bicubic;
         }
-        a img {
-          border-style: none;
-        }
         tr {
           border-collapse: collapse;
         }
@@ -63,18 +61,38 @@
 
         /* Text styles */
         .text {
-            background: #ffffff;
-            font-size: 16px;
-            font-family: arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px 12px;
+        }
+        .title {
+            background-color: #000000;
+            font-size: 18px;
+            font-family: Georgia, serif;
+            color: #eeeeee;
+            text-align: center;
+            padding: 15px;
+        }
+        .footer {
+            background-color: #777777;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #ffffff;
+            padding: 10px;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: underline;
         }
 
         /* Layout styles */
         .container {
             max-width: 600px;
         }
-        
         .column {
             padding: 10px;
         }
@@ -83,13 +101,12 @@
         .flybrid-container {
             text-align: center;
         }
-        .flybrid-container.padded {
+        .padded {
             padding: 10px;
         }
         .flybrid,
         .flybrid > tbody {
             display: block;
-            vertical-align: middle;
             font-size: 0px;
             line-height: 0px;
         }
@@ -102,18 +119,36 @@
             max-width: 100%;
         }
 
-        @media screen and (min-width:1px) {
-            /* For any clients that support media queries, we override the cell
-            widths to percentages, so that they stretch to fit. Much nicer! */
-            .flybrid.four-cols > tbody > tr > th {
+        @media screen and (min-width:568px) {
+            /* This media query and the styles within are entirely optional.
+            They just aim to help the email keeps it's original layout in
+            the Mail app on iPhone 5 and iPod Touch, where the screen width
+            is just a little bit smalller than the 600px needed to display
+            the email at full width.
+            */
+            .flybrid.quarters > tbody > tr > th,
+            .flybrid > tbody > tr > th.quarter {
                 width: 25% !important;
             }
-            .flybrid.three-cols > tbody > tr > th {
+             
+            .flybrid.thirds > tbody > tr > th,
+            .flybrid > tbody > tr > th.third {
                 width: 33.33% !important;
             }
-            .flybrid.two-cols > tbody > tr > th {
+
+            .flybrid.halves > tbody > tr > th,
+            .flybrid > tbody > tr > th.half {
                 width: 50% !important;
             }
+
+            .flybrid > tbody > tr > th.two-thirds {
+                width: 66.66% !important;
+            }
+
+            .flybrid > tbody > tr > th.three-quarters {
+                width: 66.66% !important;
+            }
+
             .flybrid > tbody > tr > th.side-col {
                 width: 35% !important;
             }
@@ -122,36 +157,51 @@
             }
         }
 
-        @media screen and (max-width:560px) {
+        @media screen and (max-width:567px) {
+            /* This media query and the styles within are entirely optional.
+            Their purpose in this example is to adjust the widths of the 
+            stacking cells, so that they spread out to better fill the
+            screen on smaller devices (where the email client supports media
+            queries). */
+
+
             /* Here, we adjust the left and right padding slightly to give
             the columns more room on smaller displays. */
             .flybrid-container.padded {
                 padding-left: 6px !important;
                 padding-right: 6px !important;
             }
+
             /* We also prevent quarter are third width cols becoming too
             'squished' by diving them a bigger portion of the display area. */
-            .flybrid.four-cols > tbody > tr > th {
+            .flybrid.quarters > tbody > tr > th,
+            .flybrid > tbody > tr > th.quarter {
                 width: 50% !important;
             }
-            .flybrid.three-cols > tbody > tr > th {
+            .flybrid.thirds > tbody > tr > th,
+            .flybrid > tbody > tr > th.third {
                 width: 50% !important;
             }
-            /* Since half width cols are wider natrually, as the display area
-            becomes narrower, we'll let them become 100% wide earlier. */
-            .flybrid.two-cols > tbody > tr > th {
-                display: block !important;
-                width: auto !important;
+
+            /* Since the other column sizes in this example are wider
+            naturally, as the display area becomes narrower, we'll let them
+            become 100% wide earlier. */
+            .flybrid.halves > tbody > tr > th,
+            .flybrid > tbody > tr > th.half,
+            .flybrid > tbody > tr > th.two-thirds,
+            .flybrid > tbody > tr > th.three-quarters {
+                width: 100% !important;
             }
 
             .flybrid > tbody > tr > th.side-col,
             .flybrid > tbody > tr > th.content-col {
-                display: block !important;
-                width: auto !important;
+                width: 100% !important;
             }
         }
 
         @media screen and (max-width:400px) {
+            /* These styles are also entirely optional. */
+
             /* Here we adjust the left and right padding a little bit more */
             .flybrid-container.padded {
                 padding-left: 3px !important;
@@ -160,8 +210,7 @@
             /* Here, we make all flybrid columns 100% width, no matter the
             original size. */
             .flybrid.flybrid > tbody > tr > th {
-                display: block !important;
-                width: auto !important;
+                width: 100% !important;
             }
         }
     </style>
@@ -183,7 +232,7 @@
                 <![endif]-->
                 <table border="0" cellpadding="0" cellspacing="0" class="container" width="100%">
                     <tr>
-                        <td width="100%" height="25" bgcolor="#888888"></td>
+                        <td width="100%" bgcolor="#888888" class="title">2 equal-width columns</td>
                     </tr>
                     <tr>
                         <!-- 
@@ -202,13 +251,13 @@
                                 2) Inside the `.flybrid-container` cell, we add a `<table>` with the 
                                    `.flybrid` class added to it. This table and it's immediate rows and
                                    columns are the elements we need to focus our attention on. The table
-                                   below also uses a `.two-cols` class, which is NOT required. That's
+                                   below also uses a `.halves` class, which is NOT required. That's
                                    just something I've created for this example to make 2 equal-size
                                    columns behave in a certain way. Feel free to copy and use it in
                                    your project though, if you like the way it works.
                             
                             -->
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid two-cols" width="100%">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid halves" width="100%">
                                 <!-- 
 
                                     3) Any table using the `.flybrid` class also needs a `<tbody>`
@@ -317,7 +366,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td width="100%" height="25" bgcolor="#888888"></td>
+                        <td width="100%" bgcolor="#888888" class="title">2 equal-width columns (without padding/spacing)</td>
+                    </tr>
+                    <tr>
+                        <td width="100%" height="25"></td>
                     </tr>
                     <tr>
                         <td class="flybrid-container">
@@ -327,7 +379,7 @@
                                this example, I don't want padding between or around my columns
 
                             -->
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid two-cols" width="100%">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid halves" width="100%">
                                 <tbody><tr>
                                     <th width="300" style="width:300px;">
                                         <!-- 
@@ -340,16 +392,15 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
                                                 <td class="text">
-                                                    Half (no padding)
+                                                    Half
                                                 </td>
                                             </tr>
-                                        </table>
-                                               
+                                        </table>      
                                     </th><th width="300" style="width:300px">
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
                                                 <td class="text" style="background-color:#e1e1e1;">
-                                                    Half (no padding)
+                                                    Half
                                                 </td>
                                             </tr>
                                         </table>
@@ -357,7 +408,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
                                                 <td class="text" style="background-color:#e1e1e1;">
-                                                    Half (no spacing)
+                                                    Half
                                                 </td>
                                             </tr>
                                         </table>
@@ -365,7 +416,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
                                                 <td class="text">
-                                                    Half (no spacing)
+                                                    Half
                                                 </td>
                                             </tr>
                                         </table>
@@ -375,7 +426,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td width="100%" height="25" bgcolor="#888888"></td>
+                        <td width="100%" height="25"></td>
+                    </tr>
+                    <tr>
+                        <td width="100%" bgcolor="#888888" class="title">Columns of differing widths</td>
                     </tr>
                      <tr>
                         <td class="flybrid-container padded">
@@ -421,11 +475,65 @@
                         </td>
                     </tr>
                     <tr>
-                        <td width="100%" height="25" bgcolor="#888888"></td>
+                        <td width="100%" bgcolor="#888888" class="title">3 equal-width columns (single row)</td>
                     </tr>
                     <tr>
                         <td class="flybrid-container padded">
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid three-cols" width="100%">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid thirds" width="100%">
+                                <tbody><tr>
+                                    <th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="193" style="width:193px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Third
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" bgcolor="#888888" class="title">3 equal-width columns (two rows)</td>
+                    </tr>
+                    <tr>
+                        <td class="flybrid-container padded">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid thirds" width="100%">
                                 <tbody><tr>
                                     <th width="193" style="width:193px;">
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -517,12 +625,82 @@
                         </td>
                     </tr>
                     <tr>
-                        <td width="100%" height="25" bgcolor="#888888"></td>
+                        <td width="100%" bgcolor="#888888" class="title">4 equal-width columns (single row)</td>
                     </tr>
                     <tr>
                         <td class="flybrid-container padded">
                         
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid four-cols" width="100%">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid quarters" width="100%">
+                                <tbody><tr>
+                                    <th width="145" style="width:145px;">
+                                    
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th><th width="145" style="width:145px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="column">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="text">
+                                                                Quarter
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" bgcolor="#888888" class="title">4 equal-width columns (two rows)</td>
+                    </tr>
+                    <tr>
+                        <td class="flybrid-container padded">
+                        
+                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid quarters" width="100%">
                                 <tbody><tr>
                                     <th width="145" style="width:145px;">
                                     
@@ -643,9 +821,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" width="100%" height="25" bgcolor="#888888"></td>
+                        <td width="100%" bgcolor="#888888" class="footer"><unsubscribe>Unsubscribe link for Campaign Monitor</unsubscribe></td>
                     </tr>
-                    
                 </table>
                 <!--[if (gte mso 9)|(IE)]>
                       </td>
