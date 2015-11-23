@@ -2,7 +2,13 @@
 
 It's a demonstration and explaination of an approach for achieving 'fluid-hybrid' layouts in HTML emails, without any horrible conditional `<table>` code or `<div>` elements that are only used by certain email clients, or the potentially confusing switch to using CSS `min-width` and `max-width` rules to control column widths.
 
-For those who don't know, 'fluid-hybrid' is an HTML email design term used to describe an approach for creating multi-column layouts that 'stack' nicely on smaller screens without the use `@media` queries, but with `@media` queries used to 'progressively enhance' the experience in email clients that support them.
+For those who don't know, 'fluid-hybrid' is an HTML email design term used to describe an approach for creating multi-column layouts that 'stack' nicely on smaller screens without the use `@media` queries, but with `@media` queries used to 'progressively enhance' the experience in email clients that support them. It's primarily built around the idea of using `text-align:center` on a container, and `display:inline-block` on the elements you want to stack, which in combination, makes the elements align to the centre of the container when stacked.
+
+Nicole Merlin's article gives a fantastic explaination and demonstration of the overall effect:
+http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+
+Flybrid essentially provides the same results in the same email clients, but has been developed to make the technical implementation of the approach a little simpler and easier to understand.
+
 
 ## Does it even work?
 
