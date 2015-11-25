@@ -29,7 +29,11 @@ Whatever technique you use to create your email. **ALWAYS TEST YOUR CODE BEFORE 
 
 ## Building on the great work by
 
- **Nicole Merlin** at Email Wizardry and her approach explained in the following article: http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+**Nicole Merlin** at Email Wizardry and her explaination of the approach in the following article: http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+ 
+**Ros Hodgekiss** at Campaign Monitor, who posted about the approach originally in this article:
+https://www.campaignmonitor.com/blog/email-marketing/2014/07/creating-a-centred-responsive-design-without-media-queries/
  
 **Geoff Philips** at EmailOnAcid and all the useful blog articles he puts out on a regular basis:
 https://www.emailonacid.com/blog/author/geoff-phillips
+
