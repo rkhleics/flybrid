@@ -16,7 +16,7 @@
         body {
             background-color: #444444;
             padding:0;
-            margin:0; 
+            margin:0;
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
         }
@@ -208,11 +208,12 @@
 
                             1) We start with a `<td>` with the `.flybrid-container` class added to it. 
                                The  `.flybrid-container` class simply ensures that flybrid cells become
-                               aligned to the center when they start to stack. and provides some
-                               padding to make the space around and between columns nice and consistent.
-                               If you want to alter this spacing, or ditch it all together, you can
-                               easily update `.flybrid-container` and `.column` classes in <head>, and
-                               adjust the width of your `<th>` elements.
+                               aligned to the center when they start to stack. The `.padded` class
+                               provides some padding to make the space around and between columns nice
+                               and consistent. If you want to alter this spacing, or ditch it all
+                               together, you can play with the `.flybrid-container`, `.padded` and 
+                               `.column` classes in <head>, and adjust the width of your `<th>`
+                               elements.
                         -->
                         <td class="flybrid-container padded">
                             <!--
@@ -354,8 +355,8 @@
                                         <!-- 
 
                                         10) Note that the nested table with a `.column` class isn't
-                                            used here either. You can do whatever you like inside
-                                            the <th>.
+                                            used here either. Within reason, you can do whatever you
+                                            like inside the <th>.
 
                                         -->
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
