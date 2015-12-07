@@ -98,17 +98,24 @@
         }
 
         /* Flybrid styles */
-        .flybrid-container {
-            text-align: center;
-        }
         .padded {
             padding: 10px;
         }
-        .flybrid,
+        .flybrid {
+            display: block;
+           
+        }
         .flybrid > tbody {
             display: block;
+            text-align: center;
             font-size: 0px;
             line-height: 0px;
+        }
+        .stack-to-left > tbody {
+            text-align: left;
+        }
+        .stack-to-right > tbody {
+            text-align: right;
         }
         .flybrid > tbody > tr {
             display: inline;
@@ -116,7 +123,6 @@
         .flybrid > tbody > tr > th {
             display: inline-block;
             overflow: hidden;
-            max-width: 100%;
         }
 
         @media screen and (max-width:540px) {
@@ -129,7 +135,7 @@
 
             /* Here, we adjust the left and right padding slightly to give
             the columns more room on smaller displays. */
-            .flybrid-container.padded {
+            .padded {
                 padding-left: 6px !important;
                 padding-right: 6px !important;
             }
@@ -149,14 +155,7 @@
             naturally, as the display area becomes narrower, we'll let them
             become 100% wide earlier. */
             .flybrid.halves > tbody > tr > th,
-            .flybrid > tbody > tr > th.half,
-            .flybrid > tbody > tr > th.two-thirds,
-            .flybrid > tbody > tr > th.three-quarters {
-                width: 100% !important;
-            }
-
-            .flybrid > tbody > tr > th.side-col,
-            .flybrid > tbody > tr > th.content-col {
+            .flybrid > tbody > tr > th.half {
                 width: 100% !important;
             }
         }
@@ -165,7 +164,7 @@
             /* These styles are also entirely optional. */
 
             /* Here we adjust the left and right padding a little bit more */
-            .flybrid-container.padded {
+            .padded {
                 padding-left: 3px !important;
                 padding-right: 3px !important;
             }
@@ -176,11 +175,17 @@
             }
         }
 
-        @media yahoo {
+        @media screen and (min-width:1px) {
             /* Yahoo seems to want to add a 1px space around each cell. This
             fix removes that space in everything but IE10 and IE11 viewing the
             Yahoo webmail client. */
             .flybrid > tbody > tr > th { margin: -1px !important; }
+        }
+
+        @media screen and (min-width:1px) and (max-width:3000px) {
+            /* Yahoo can't read multi-feature media queries, so this style removes
+             the negative margin applied above in everything but Yahoo. */
+            .flybrid > tbody > tr > th { margin: 0 !important; }
         }
     </style>
 <!--[if gte mso 9]><xml>
@@ -206,23 +211,20 @@
                     <tr>
                         <!-- 
 
-                            1) We start with a `<td>` with the `.flybrid-container` class added to it. 
-                               The  `.flybrid-container` class simply ensures that flybrid cells become
-                               aligned to the center when they start to stack. The `.padded` class
-                               provides some padding to make the space around and between columns nice
-                               and consistent. If you want to alter this spacing, or ditch it all
-                               together, you can play with the `.flybrid-container`, `.padded` and 
-                               `.column` classes in <head>, and adjust the width of your `<th>`
-                               elements.
+                            1) We start with a completely ordinary `<td>`, which our flybrid table
+                               will sit inside. In this case, the `.padded` class has been added to
+                               the cell to provide some extra padding around the table, making the
+                               space around and between columns nice and consistent - but it's that's
+                               by no means necessary.
                         -->
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                             <!--
 
-                                2) Inside the `.flybrid-container` cell, we add a `<table>` with the 
-                                   `.flybrid` class added to it. This table and it's immediate rows and
-                                   columns are the elements we need to focus our attention on. The table
-                                   below also uses a `.halves` class, which is NOT required. That's
-                                   just something I've created for this example to make 2 equal-size
+                                2) Inside our cell, we add a `<table>` with the `.flybrid` class added
+                                   to it. This table and it's immediate rows and columns are the
+                                   elements we need to focus our attention on. The table below also
+                                   uses a `.halves` class, which is NOT required. That's just
+                                   something I've created for this example to make 2 equal-size
                                    columns behave in a certain way. Feel free to copy and use it in
                                    your project though, if you like the way it works.
                             
@@ -233,9 +235,10 @@
                                     3) Any table using the `.flybrid` class also needs a `<tbody>`
                                        adding to it. This is required so that we can reliably target
                                        elements using direct descendant CSS selectors to target the
-                                       correct elements. Feel free to abandon the use of `<tbody>`
-                                       elsewhere, if that's what you're used to. Your `.flybrid` tables
-                                       need it, though.
+                                       correct elements. In the flybrid approach, the `<tbody>`
+                                       actually becomes a block element and plays an important role,
+                                       so don't forget to include it. Feel free to abandon the use of
+                                       `<tbody>` elsewhere however, if that's what you're used to.
 
                                 -->
                                 <tbody><tr>
@@ -254,12 +257,13 @@
                                            widths to percentages, to make them more flexible.
                                         
                                         6) Like in the above example, you need to apply width using
-                                           both the `width` AND `style` attributes specifying the same
-                                           width. The `width` attribute is for the less capable email
-                                           clients, and will work while the table structure is still
-                                           intact. The width value in the `style` attribute will be
-                                           used when the table structure breaks down, and the cells
-                                           become 'inline-block' elements. 
+                                           the `width` attribute, then again with the the same pixel
+                                           value, in a `width` declaration, in an inline `style`
+                                           attribute. The `width` attribute is for the less capable
+                                           email clients, and will work while the table structure is
+                                           still intact. The CSS version will be used when the table
+                                           structure breaks down, and the cells become 'inline-block'
+                                           elements. 
 
                                         7) Don't introduce any padding at this level. If you want to
                                            add padding to your columns, nest another table within
@@ -342,7 +346,7 @@
                         <td width="100%" height="25"></td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container">
+                        <td>
                             <!-- 
 
                             9) This `.flybrid-continaer` doesn't use the `.padded` class, because in
@@ -399,56 +403,10 @@
                         <td width="100%" height="25"></td>
                     </tr>
                     <tr>
-                        <td width="100%" bgcolor="#888888" class="title">Columns of differing widths</td>
-                    </tr>
-                     <tr>
-                        <td class="flybrid-container padded">
-                            <!-- 
-
-                            11) Using uneven columns is totally possible, too. You just need to add
-                                classes to your columns, and target them using media queries to
-                                optimize how they break down.
-                            -->
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid" width="100%">
-                                <tbody><tr>
-                                    <th width="200" style="width:200px;" class="side-col">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text" style="background-color:#e1e1e1;">
-                                                                .side-col
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th><th width="380" style="width:380px;" class="content-col">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                .content-col
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th>
-                                </tr></tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
                         <td width="100%" bgcolor="#888888" class="title">3 equal-width columns (single row)</td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid thirds" width="100%">
                                 <tbody><tr>
                                     <th width="193" style="width:193px;">
@@ -502,7 +460,7 @@
                         <td width="100%" bgcolor="#888888" class="title">3 equal-width columns (two rows)</td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid thirds" width="100%">
                                 <tbody><tr>
                                     <th width="193" style="width:193px;">
@@ -598,7 +556,7 @@
                         <td width="100%" bgcolor="#888888" class="title">4 equal-width columns (single row)</td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                         
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid quarters" width="100%">
                                 <tbody><tr>
@@ -668,7 +626,7 @@
                         <td width="100%" bgcolor="#888888" class="title">4 equal-width columns (two rows)</td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                         
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid quarters" width="100%">
                                 <tbody><tr>

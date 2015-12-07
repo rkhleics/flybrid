@@ -9,15 +9,15 @@
     <title></title>
     <style type="text/css">
         html {
-          padding: 0;
-          margin: 0;
+            padding: 0;
+            margin: 0;
         }
         body {
-          background-color: #444444;
-          padding:0;
-          margin:0; 
-          -webkit-text-size-adjust: 100%;
-          -ms-text-size-adjust: 100%;
+            background-color: #444444;
+            padding:0;
+            margin:0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
         }
         #wrapper {
             background-color: #444444;
@@ -57,11 +57,11 @@
         td, th {
           vertical-align: top;
         }
+
         .text {
             background-color: #ffffff;
             color: #000000;
             font-size: 15px;
-            line-height: 19px;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px 12px;
@@ -69,7 +69,6 @@
         .title {
             background-color: #000000;
             font-size: 18px;
-            line-height: 23px;
             font-family: Georgia, serif;
             color: #eeeeee;
             text-align: center;
@@ -87,23 +86,32 @@
             color: #ffffff;
             text-decoration: underline;
         }
+
         .container {
             max-width: 600px;
         }
         .column {
             padding: 10px;
         }
-        .flybrid-container {
-            text-align: center;
-        }
+
         .padded {
             padding: 10px;
         }
-        .flybrid,
+        .flybrid {
+            display: block;
+           
+        }
         .flybrid > tbody {
             display: block;
+            text-align: center;
             font-size: 0px;
             line-height: 0px;
+        }
+        .stack-to-left > tbody {
+            text-align: left;
+        }
+        .stack-to-right > tbody {
+            text-align: right;
         }
         .flybrid > tbody > tr {
             display: inline;
@@ -111,37 +119,30 @@
         .flybrid > tbody > tr > th {
             display: inline-block;
             overflow: hidden;
-            max-width: 100%;
         }
 
         @media screen and (max-width:540px) {
-            .flybrid-container.padded {
+            .padded {
                 padding-left: 6px !important;
                 padding-right: 6px !important;
             }
+
             .flybrid.quarters > tbody > tr > th,
-            .flybrid > tbody > tr > th.quarter {
-                width: 50% !important;
-            }
+            .flybrid > tbody > tr > th.quarter,
             .flybrid.thirds > tbody > tr > th,
             .flybrid > tbody > tr > th.third {
                 width: 50% !important;
             }
+
             .flybrid.halves > tbody > tr > th,
-            .flybrid > tbody > tr > th.half,
-            .flybrid > tbody > tr > th.two-thirds,
-            .flybrid > tbody > tr > th.three-quarters {
+            .flybrid > tbody > tr > th.half {
                 width: 100% !important;
             }
 
-            .flybrid > tbody > tr > th.side-col,
-            .flybrid > tbody > tr > th.content-col {
-                width: 100% !important;
-            }
         }
 
         @media screen and (max-width:400px) {
-            .flybrid-container.padded {
+            .padded {
                 padding-left: 3px !important;
                 padding-right: 3px !important;
             }
@@ -150,8 +151,12 @@
             }
         }
 
-        @media yahoo {
+        @media screen and (min-width:1px) {
             .flybrid > tbody > tr > th { margin: -1px !important; }
+        }
+
+        @media screen and (min-width:1px) and (max-width:3000px) {
+            .flybrid > tbody > tr > th { margin: 0 !important; }
         }
     </style>
 <!--[if gte mso 9]><xml>
@@ -175,7 +180,7 @@
                         <td width="100%" bgcolor="#888888" class="title">2 equal-width columns</td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid halves" width="100%">
                                 <tbody><tr>
                                     <th width="290" style="width:290px;" align="center">
@@ -246,7 +251,7 @@
                         <td width="100%" height="25"></td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container">
+                        <td>
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid halves" width="100%">
                                 <tbody><tr>
                                     <th width="300" style="width:300px;">
@@ -290,50 +295,10 @@
                         <td width="100%" height="25"></td>
                     </tr>
                     <tr>
-                        <td width="100%" bgcolor="#888888" class="title">Columns of differing widths</td>
-                    </tr>
-                    <tr>
-                        <td class="flybrid-container padded">
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid" width="100%">
-                                <tbody><tr>
-                                    <th width="200" style="width:200px;" class="side-col">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text" style="background-color:#e1e1e1;">
-                                                                .side-col
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th><th width="380" style="width:380px;" class="content-col">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="column">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td class="text">
-                                                                .content-col
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th>
-                                </tr></tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
                         <td width="100%" bgcolor="#888888" class="title">3 equal-width columns (single row)</td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid thirds" width="100%">
                                 <tbody><tr>
                                     <th width="193" style="width:193px;">
@@ -387,7 +352,7 @@
                         <td width="100%" bgcolor="#888888" class="title">3 equal-width columns (two rows)</td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid thirds" width="100%">
                                 <tbody><tr>
                                     <th width="193" style="width:193px;">
@@ -483,7 +448,7 @@
                         <td width="100%" bgcolor="#888888" class="title">4 equal-width columns (single row)</td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                         
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid quarters" width="100%">
                                 <tbody><tr>
@@ -553,7 +518,7 @@
                         <td width="100%" bgcolor="#888888" class="title">4 equal-width columns (two rows)</td>
                     </tr>
                     <tr>
-                        <td class="flybrid-container padded">
+                        <td class="padded">
                         
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid quarters" width="100%">
                                 <tbody><tr>
