@@ -1,9 +1,8 @@
 # What is flybrid?
 
-It's a demonstration and explanation of an approach for achieving 'fluid-hybrid' layouts in HTML emails, without any horrible conditional `<table>` code or `<div>` elements that are only used by certain email clients, or the potentially confusing switch to using CSS `max-width` rules to control column widths.
+It's a demonstration and explanation of an approach for achieving 'fluid hybrid' layouts in HTML emails, without any unsightly conditional `<table>` code or additional `<div>` elements, or the confusing switch to using CSS `max-width` rules to control column widths, and the limitations that has when inner content doesn't quite 'push the columns out' to their intended size
 
-
-For those who don't know, 'fluid-hybrid' is an HTML email design term, referring to a method of creating multi-column layouts that 'stack' nicely on smaller screens without the use `@media` queries (with `@media` queries often used to 'progressively enhance' the experience in email clients that support them). It's primarily built around the idea of using `text-align:center` on a container element, and `display:inline-block` on the elements you want to stack, which in combination, makes the elements align to the centre of the container when stacked.
+For those who don't know, 'fluid-hybrid' is an HTML email design term, referring to a method of creating multi-column layouts that 'stack' nicely on smaller screens without the use `@media` queries (with `@media` queries often used to 'progressively enhance' the experience in email clients that support them). It's primarily based around the idea of using `text-align:center` on a container element, and `display:inline-block` on the columns you wish to stack, which in combination, makes the columns align to the centre of the container when stacked.
 
 Nicole Merlin's article gives a fantastic explanation and demonstration of the overall idea / approach:
 http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
