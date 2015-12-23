@@ -7,7 +7,7 @@ For those who don't know, 'fluid-hybrid' is an HTML email design term, referring
 Nicole Merlin's article gives a fantastic explanation and demonstration of the overall idea / approach:
 http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
 
-Flybrid essentially provides the same results in the same email clients, but has been developed to make the technical implementation of the approach a little simpler and easier to understand.
+Flybrid essentially provides similar results in the same email clients, but has been developed to make the technical implementation of the approach a little simpler and easier to understand. Sticking with `width` CSS rules to control column sizes also tends to produce more consistent results in Outlook.
 
 ## Known limitations
 
