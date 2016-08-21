@@ -11,7 +11,7 @@ Flybrid essentially provides similar results in the same email clients, but has 
 
 ## Known limitations
 
-The switch to using the `width` CSS rule instead of a `width:100%` / `max-width` combination to control column widths, means than columns will not shrink down to fit the screen when the natural column width exceeds that of the screen (adding `max-width:100%` to the columns does not seem to work). Generally, this is fine, as columns are quite often narrower than the smallest screen you wish to support (iPhone5/5S at 320 pixels). However, if your layout has columns that are approaching 300px wide or more (e.g. in a side / main column layout), you might want to consider using the approach discussed in Nicola Merlin's article instead.
+The switch to using the `width` CSS rule instead of a `width:100%` / `max-width` combination to control column widths, means than columns will not naturally shrink down to fit the screen when their natural width exceeds that of the screen (adding `max-width:100%` to the columns does not seem to work). For example, a `400px` wide column will remain `400px` wide on a `320px` display. You can override the width easily enough with `@media` queries for clients that support them. But, in clients that don't (most commonly Gmail for Android & iOS), the results will be less than ideal. This shouldn't be a problem for most multi-column layouts, as columns will quite often be narrower than the smallest screen you wish to support (iPhone5/5S at 320 pixels). However, if your layout has columns upwards of 300px wide (e.g. in a side / main column layout), you might want to consider using the approach discussed in Nicola Merlin's article instead.
 
 ## Test results
 
