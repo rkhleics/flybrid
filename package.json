@@ -1,0 +1,36 @@
+{
+  "name": "flybrid",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andy Babic <ababic@rkh.co.uk>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-batch-replace": "0.0.0",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-delete-lines": "0.0.7",
+    "gulp-inline-css": "^3.1.0",
+    "gulp-inline-source": "^3.0.0",
+    "gulp-less": "^3.1.0",
+    "gulp-remove-html": "^1.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.7"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rkhleics/flybrid"
+  },
+  "keywords": [
+    "email",
+    "fluid",
+    "hybrid",
+    "fluid-hybrid"
+  ],
+  "description": "An approach for achieving 'fluid-hybrid' layouts in HTML emails, without any unsightly conditional `<table>` code, additional `<div>` elements."
+}

@@ -1,0 +1,146 @@
+@yellow:        #deb700;
+@yellow-dark:   darken(@yellow, 6%);
+@yellow-light:  lighten(@yellow, 5%);
+@green:         #6dd7b7;
+@green-dark:    darken(@green, 14%);
+@green-light:   lighten(@green, 12%);
+@blue:          #68aee3;
+@blue-dark:     darken(@blue, 10%);
+@blue-light:    lighten(@blue, 9%);
+
+body, #wrapper { background-color: #e3e3e3; }
+
+.light-bg { background-color: #f2f2f2; }
+.dark-bg { background-color: #aaaaaa; }
+.yellow-bg { 
+    background-color: @yellow; 
+    .light-bg { background-color: @yellow-light; }
+    .dark-bg { background-color: @yellow-dark; }
+}
+.green-bg { 
+    background-color: @green;
+    .light-bg { background-color: @green-light; }
+    .dark-bg { background-color: @green-dark; } 
+}
+.blue-bg { 
+    background-color: @blue; 
+    .light-bg { background-color: @blue-light; }
+    .dark-bg { background-color: @blue-dark; } 
+}
+.white-bg { background-color: #ffffff; }
+
+.image-cell { 
+    font-size: 1px;
+    line-height: 1px;
+}
+
+p {
+  Margin-top: 0;
+  Margin-bottom: 12px;
+}
+
+a { 
+    color: @blue;
+    font-weight: bold;
+    text-decoration: underline;
+    &:hover { color: @blue-light; }
+}
+
+code {
+    font-family: Courier, monospace;
+    background-color: #e4e4e4;
+}
+
+/* Text styles */
+.text {
+    color: #000000;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 13px 15px 3px;
+    mso-line-height-rule: exactly;
+    line-height: 19px;
+}
+.example-heading {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .text {
+        background-color: #000000;
+        font-size: 17px;
+        font-family: Georgia, serif;
+        color: #ffffff;
+        text-align: center;
+        padding: 15px;
+        mso-line-height-rule: exactly;
+        line-height: 21px;
+    }
+}
+
+.primer {
+    background: #ffffff;
+    padding: 2px 20px 15px;
+}
+
+h2 { 
+    font-size: 22px;
+    font-weight: normal;
+    mso-line-height-rule: exactly;
+    line-height: 27px;
+    Margin-top: 28px;
+    Margin-bottom: 18px;
+    code { font-size: 21px; }
+}
+
+.footer {
+    background-color: #777777;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+}
+.footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Layout styles */
+.container {
+    max-width: 600px;
+}
+.column {
+    padding: 10px;
+}
+
+/* Flybrid styles */
+.padded {
+    padding: 10px;
+}
+
+.reverse-col-horizontal-order {
+    direction: rtl;
+    > tbody > tr > td,
+    > tbody > tr > th,
+    > tr > td,
+    > tr > th {
+        direction: ltr;
+    }
+} 
+
+@media screen and (max-width:540px) {
+    /* Here, we adjust the left and right padding slightly to give
+    the columns more room on smaller displays. */
+    .padded {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+}
+
+@media screen and (max-width:400px) {
+    /* Here we adjust the left and right padding a little bit more */
+    .padded {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+}
