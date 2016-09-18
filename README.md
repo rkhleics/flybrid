@@ -4,7 +4,7 @@ It's a simple, alternative approach for creating 'fluid-hybrid' layouts for HTML
 
 Other fluid-hybrid approaches use complex combinations of tricks and hacks to achieve the desired effect. They are driven by a lot of smart thinking, but they are typically complex, difficult to implement quickly, and come with their own set of quirks. For most layouts of two or more columns, flybrid will allow you to achieve comparable results with less code and complexity, helping you meet deadlines with your sanity intact.
 
-## Benefits
+### Benefits of flybrid
 
 - No conditional `<table>` code or `<div>`s for each layout. Just a single `<table>` that breaks down in the right email clients.
 - No additional tricks or hacks are needed for targeting different clients - the included styles
@@ -13,7 +13,7 @@ Other fluid-hybrid approaches use complex combinations of tricks and hacks to ac
 - Lots of examples to copy from.
 - Well tested. [See the design test results for yourself »](https://www.emailonacid.com/app/acidtest/display/summary/02nvMlv0HNyCjHgYAoMovYuPS4Wb6f6MBS3gwlrMPiq8c/shared)
 
-## Limitations
+### Limitations of flybrid
 
 - Using flybrid, columns will not shrink to fit the viewport on smaller mobile devices (like they do with other fluid-hybrid techniques), so it's not suitable for ALL layouts. [Check out the design tests](https://www.emailonacid.com/app/acidtest/display/summary/02nvMlv0HNyCjHgYAoMovYuPS4Wb6f6MBS3gwlrMPiq8c/shared) to get a better idea of how flybrid can be used. 
 
