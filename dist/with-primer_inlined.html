@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="margin: 0; padding: 0;">
+<!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml" class="ie"><![endif]--><!--[if !IE]><!--><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="margin: 0; padding: 0;"><!--<![endif]-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--[if !mso]><!-->
@@ -58,8 +58,6 @@ h2 code{font-size:21px}
 .footer{background-color:#777777;font-size:14px;font-family:Arial,sans-serif;color:#ffffff}
 .footer a{color:#ffffff}
 .container{max-width:600px}
-.reverse-col-horizontal-order{direction:rtl}
-.reverse-col-horizontal-order>tbody>tr>td,.reverse-col-horizontal-order>tbody>tr>th,.reverse-col-horizontal-order>tr>td,.reverse-col-horizontal-order>tr>th{direction:ltr}
 @media screen and (max-width:540px){.padded{padding-left:6px!important;padding-right:6px!important}
 }
 @media screen and (max-width:400px){.flybrid>tbody>tr>th.stretch-mobile{width:100%!important}
@@ -94,7 +92,7 @@ h2 code{font-size:21px}
                     <tr style="border-collapse: collapse;">
                         <td align="left" class="primer text" style="background: #ffffff; color: #000000; font-family: Arial,sans-serif; font-size: 15px; line-height: 19px; mso-line-height-rule: exactly; padding: 2px 20px 15px; text-align: center; vertical-align: top;">
                             <h2 style="Margin-bottom: 18px; Margin-top: 28px; font-size: 22px; font-weight: 400; line-height: 27px; mso-line-height-rule: exactly;">1. A <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">&lt;table&gt;</code> with a <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">&lt;tbody&gt;</code></h2>
-                            <p style="Margin-bottom: 12px; Margin-top: 0;">A flybrid table is just a simple <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;table&gt;</code> element with the <code style="background-color: #e4e4e4; font-family: Courier,monospace;">.flybrid</code> class added to it, a <code style="background-color: #e4e4e4; font-family: Courier,monospace;">width</code> value of <code style="background-color: #e4e4e4; font-family: Courier,monospace;">100%</code>, and a <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;tbody&gt;</code> element added inside to wrap the table's rows and columns <strong>(don't forget!)</strong>. There's no need for addional <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;div&gt;</code> elements, conditional code (well, only a tiny bit, for special cases), and no complex CSS rules to write.</p>
+                            <p style="Margin-bottom: 12px; Margin-top: 0;">A flybrid table is just a simple <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;table&gt;</code> element with the <code style="background-color: #e4e4e4; font-family: Courier,monospace;">.flybrid</code> class added to it, a <code style="background-color: #e4e4e4; font-family: Courier,monospace;">width</code> value of <code style="background-color: #e4e4e4; font-family: Courier,monospace;">100%</code>, and a <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;tbody&gt;</code> element added inside to wrap the table's rows and columns <strong>(don't forget!)</strong>. There's no need for addional <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;div&gt;</code> elements, conditional code, and no complex CSS rules to write.</p>
                                     
                             <h2 style="Margin-bottom: 18px; Margin-top: 28px; font-size: 22px; font-weight: 400; line-height: 27px; mso-line-height-rule: exactly;">2. Use <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">&lt;th&gt;</code> for cells</h2>     
                             <p style="Margin-bottom: 12px; Margin-top: 0;">Each cell in a flybrid table must be a <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;th&gt;</code> element, instead of the usual <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;td&gt;</code>. This is to make the stock email client on Android 4.4 (KitKat) devices respect overrides of the <code style="background-color: #e4e4e4; font-family: Courier,monospace;">display</code> CSS attribute.</p>
@@ -103,28 +101,18 @@ h2 code{font-size:21px}
                             <p style="Margin-bottom: 12px; Margin-top: 0;">Use pixel widths values, and declare the width using the <code style="background-color: #e4e4e4; font-family: Courier,monospace;">width</code> attribute on each <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;th&gt;</code> <strong>AND</strong> apply the same width in CSS using the <code style="background-color: #e4e4e4; font-family: Courier,monospace;">style</code> attribute.</p>
                             <p style="Margin-bottom: 12px; Margin-top: 0;">The <code style="background-color: #e4e4e4; font-family: Courier,monospace;">width</code> attribute value is for the less capable email clients, and will work while the table structure is still intact. The <code style="background-color: #e4e4e4; font-family: Courier,monospace;">style</code> value will be used when the table structure breaks down, and the cells become <code style="background-color: #e4e4e4; font-family: Courier,monospace;">inline-block</code> elements. It also helps columns resize properly in Outlook's 120 DPI mode</p>
 
-                            <h2 style="Margin-bottom: 18px; Margin-top: 28px; font-size: 22px; font-weight: 400; line-height: 27px; mso-line-height-rule: exactly;">4. Extra steps required for cells wider than <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">300px</code></h2>
-                            <p style="Margin-bottom: 12px; Margin-top: 0;">For wider columns, extra work is needed to ensure the column shrinks down to match the viewport size on smaller mobile devices. Simply adding <code style="background-color: #e4e4e4; font-family: Courier,monospace;">style="width:100%; max-width:XXXpx"</code> (where XXX is the width of your column) isn't enough because, with flybrid, the same <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;th&gt;</code> elements needs to remain the correct width in Outlook/Outlook.com/Office365, and that seems to create inconsistent results.</p>
-                            <p style="Margin-bottom: 12px; Margin-top: 0;">The solution is to use conditional comments to show one opening <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;th&gt;</code> tag to Outlook et al, and another to other browsers.</p>
-                            <p style="Margin-bottom: 12px; Margin-top: 0;">For example, if your column is <code style="background-color: #e4e4e4; font-family: Courier,monospace;">400px</code> wide, you'd replace your opening tag with the following:</p>
-                            <p style="Margin-bottom: 12px; Margin-top: 0;"><code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;!--[if (gte mso 9)|(IE)]&gt;&lt;th width="400" style="width:400px;"&gt;&lt;!--&gt;&lt;th width="400" style="width:100%; max-width:400px;"&gt;&lt;!--&lt;![endif]--&gt;</code></p>
-                            <p style="Margin-bottom: 12px; Margin-top: 0;">For further examples, view the source for examples <a href="#example_c1" style="color: #68aee3; font-weight: 700; text-decoration: underline;">C1)</a>, <a href="#example_c2" style="color: #68aee3; font-weight: 700; text-decoration: underline;">C2)</a>, <a href="#example_d" style="color: #68aee3; font-weight: 700; text-decoration: underline;">D)</a> or <a href="#example_e" style="color: #68aee3; font-weight: 700; text-decoration: underline;">E)</a> below.</p>
-
-                            <h2 style="Margin-bottom: 18px; Margin-top: 28px; font-size: 22px; font-weight: 400; line-height: 27px; mso-line-height-rule: exactly;">5. Avoid padding at <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">&lt;th&gt;</code> level</h2>
+                            <h2 style="Margin-bottom: 18px; Margin-top: 28px; font-size: 22px; font-weight: 400; line-height: 27px; mso-line-height-rule: exactly;">4. Avoid padding at <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">&lt;th&gt;</code> level</h2>
                             <p style="Margin-bottom: 12px; Margin-top: 0;">You can expect strange results if you try to add padding the <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;th&gt;</code> cells of a flybrid table. If you want to add padding to your columns, you should use a nested table (see examples below) or add spacing some other way.</p> 
 
-                            <h2 style="Margin-bottom: 18px; Margin-top: 28px; font-size: 22px; font-weight: 400; line-height: 27px; mso-line-height-rule: exactly;">6. Eliminate all gaps between <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">&lt;th&gt;</code> &amp; <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">&lt;tr&gt;</code> elements</h2>
+                            <h2 style="Margin-bottom: 18px; Margin-top: 28px; font-size: 22px; font-weight: 400; line-height: 27px; mso-line-height-rule: exactly;">5. Eliminate all gaps between <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">&lt;th&gt;</code> &amp; <code style="background-color: #e4e4e4; font-family: Courier,monospace; font-size: 21px;">&lt;tr&gt;</code> elements</h2>
                             <p style="Margin-bottom: 12px; Margin-top: 0;">A bug introduced in Apple's Mail app in iOS9 means that you need to eliminate any space between the opening and closing <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;th&gt;</code> &amp; <code style="background-color: #e4e4e4; font-family: Courier,monospace;">&lt;tr&gt;</code> elements within your flybrid table. If not, the Mail app will add additional spacing between cells, force them to stack, even when the viewport is wide enough to display the desktop layout.</p>
-
-                            <h2 style="Margin-bottom: 18px; Margin-top: 28px; font-size: 22px; font-weight: 400; line-height: 27px; mso-line-height-rule: exactly;">7. Flybrid plays nicely alongside other fluid-hybrid techniques</h2>
-                            <p style="Margin-bottom: 12px; Margin-top: 0;">If you're using a fluid-hybrid approach in your template, adding flybrid to that template project should be a peice of cake. You just need to add the styles from <a href="https://github.com/rkhleics/flybrid/blob/master/source/less/_flybrid.less" style="color: #68aee3; font-weight: 700; text-decoration: underline;">_flybrid.less</a>, use the examples below for guidance, and you should be good to go.</p>    
                         </td>
                     </tr>
                     <tr style="border-collapse: collapse;">
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_a1" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">A1) 2 equal-width columns</td>
+                                    <td class="text" id="example_a1" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">A1) 2 columns</td>
                                 </tr>
                             </table>
                         </td>
@@ -134,7 +122,6 @@ h2 code{font-size:21px}
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid" width="100%" style="display: block;">
                                 <tbody style="display: block; font-size: 0; text-align: center;"><tr style="border-collapse: collapse; display: inline;">
                                     <th width="300" style="background-color: #6dd7b7; display: inline-block; font-weight: 400; vertical-align: top; width: 300px;" class="green-bg">
-                                    
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr style="border-collapse: collapse;">
                                                 <td class="column" style="padding: 10px; vertical-align: top;">
@@ -181,7 +168,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_a2" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">A2) 2 equal-width columns (text only)</td>
+                                    <td class="text" id="example_a2" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">A2) 2 columns (text only)</td>
                                 </tr>
                             </table>
                         </td>
@@ -191,7 +178,6 @@ h2 code{font-size:21px}
                             <table border="0" cellpadding="0" cellspacing="0" class="flybrid" width="100%" style="display: block;">
                                 <tbody style="display: block; font-size: 0; text-align: center;"><tr style="border-collapse: collapse; display: inline;">
                                     <th width="300" style="background-color: #6dd7b7; display: inline-block; font-weight: 400; vertical-align: top; width: 300px;" class="green-bg">
-                                    
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr style="border-collapse: collapse;">
                                                 <td class="column" style="padding: 10px; vertical-align: top;">
@@ -228,7 +214,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_b" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">B) 2 equal-width columns (inset)</td>
+                                    <td class="text" id="example_b" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">B) 2 columns (inset)</td>
                                 </tr>
                             </table>
                         </td>
@@ -275,8 +261,8 @@ h2 code{font-size:21px}
                                                 </td>
                                             </tr>
                                         </table>
-                                    </th>
-                                </tr></tbody>
+                                    </th></tr>
+                                </tbody>
                             </table>
                         </td>
                     </tr>
@@ -284,221 +270,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_c1" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">C1) 2 uneven sized columns</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr style="border-collapse: collapse;">
-                        <td style="vertical-align: top;">
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid" width="100%" style="display: block;">
-                                <tbody style="display: block; font-size: 0; text-align: center;"><tr style="border-collapse: collapse; display: inline;">
-                                    <!--[if (gte mso 9)|(IE)]><th width="400" style="width:400px;" class="green-bg"><!--><th width="400" style="background-color: #6dd7b7; display: inline-block; font-weight: 400; max-width: 400px; vertical-align: top; width: 100%;" class="green-bg"><!--<![endif]-->
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr style="border-collapse: collapse;">
-                                                <td class="column" style="padding: 10px; vertical-align: top;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td align="center" class="image-wrapper" style="vertical-align: top;">
-                                                                <img src="https://s3-eu-west-1.amazonaws.com/rkhleics/flybrid/example_c_1.jpeg" alt="" width="380" style="-ms-interpolation-mode: bicubic; display: block; height: auto; max-width: 100%; outline-style: none; text-decoration: none;">
-                                                            </td>
-                                                        </tr>
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td class="text light-bg" style="background-color: #9de4cf; color: #000000; font-family: Arial,sans-serif; font-size: 15px; line-height: 19px; mso-line-height-rule: exactly; padding: 13px 15px 3px; text-align: center; vertical-align: top;">
-                                                                <p style="Margin-bottom: 12px; Margin-top: 0;">Aliquam tincidunt mauris eu risus auctor dapibus</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>      
-                                    </th><th width="200" style="background-color: #68aee3; display: inline-block; font-weight: 400; vertical-align: top; width: 200px;" class="blue-bg">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr style="border-collapse: collapse;">
-                                                <td class="column" style="padding: 10px; vertical-align: top;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td align="center" class="image-wrapper" style="vertical-align: top;">
-                                                                <img src="https://s3-eu-west-1.amazonaws.com/rkhleics/flybrid/example_c_2.jpeg" alt="" width="180" style="-ms-interpolation-mode: bicubic; display: block; height: auto; max-width: 100%; outline-style: none; text-decoration: none;">
-                                                            </td>
-                                                        </tr>
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td class="text light-bg" style="background-color: #8fc3ea; color: #000000; font-family: Arial,sans-serif; font-size: 15px; line-height: 19px; mso-line-height-rule: exactly; padding: 13px 15px 3px; text-align: center; vertical-align: top;">
-                                                                <p style="Margin-bottom: 12px; Margin-top: 0;">Integer vitae libero</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th>
-                                </tr></tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr style="border-collapse: collapse;">
-                        <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_c2" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">C2) 2 uneven sized columns (text only)</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr style="border-collapse: collapse;">
-                        <td style="vertical-align: top;">
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid" width="100%" style="display: block;">
-                                <tbody style="display: block; font-size: 0; text-align: center;"><tr style="border-collapse: collapse; display: inline;">
-                                    <!--[if (gte mso 9)|(IE)]><th width="400" style="width:400px" class="green-bg"><!--><th width="400" style="background-color: #6dd7b7; display: inline-block; font-weight: 400; max-width: 400px; vertical-align: top; width: 100%;" class="green-bg"><!--<![endif]-->
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr style="border-collapse: collapse;">
-                                                <td class="column" style="padding: 10px; vertical-align: top;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td class="text light-bg" style="background-color: #9de4cf; color: #000000; font-family: Arial,sans-serif; font-size: 15px; line-height: 19px; mso-line-height-rule: exactly; padding: 13px 15px 3px; text-align: center; vertical-align: top;">
-                                                                <p style="Margin-bottom: 12px; Margin-top: 0;">Aliquam tincidunt mauris eu risus auctor dapibus</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>      
-                                    </th><th width="200" style="background-color: #68aee3; display: inline-block; font-weight: 400; vertical-align: top; width: 200px;" class="blue-bg">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr style="border-collapse: collapse;">
-                                                <td class="column" style="padding: 10px; vertical-align: top;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td class="text light-bg" style="background-color: #8fc3ea; color: #000000; font-family: Arial,sans-serif; font-size: 15px; line-height: 19px; mso-line-height-rule: exactly; padding: 13px 15px 3px; text-align: center; vertical-align: top;">
-                                                                <p style="Margin-bottom: 12px; Margin-top: 0;">Integer vitae libero</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th>
-                                </tr></tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr style="border-collapse: collapse;">
-                        <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_d" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">D) 2 uneven sized columns (inset)</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr style="border-collapse: collapse;">
-                        <td class="padded yellow-bg" style="background-color: #deb700; padding: 10px; vertical-align: top;">
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid" width="100%" style="display: block;">
-                                <tbody style="display: block; font-size: 0; text-align: center;"><tr style="border-collapse: collapse; display: inline;">
-                                    <!--[if (gte mso 9)|(IE)]><th width="385" style="width:385px"><!--><th width="385" style="display: inline-block; font-weight: 400; max-width: 385px; vertical-align: top; width: 100%;"><!--<![endif]-->
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr style="border-collapse: collapse;">
-                                                <td class="column" style="padding: 10px; vertical-align: top;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td align="center" class="image-wrapper" style="vertical-align: top;">
-                                                                <img src="https://s3-eu-west-1.amazonaws.com/rkhleics/flybrid/example_d_1.jpeg" alt="" width="365" style="-ms-interpolation-mode: bicubic; display: block; height: auto; max-width: 100%; outline-style: none; text-decoration: none;">
-                                                            </td>
-                                                        </tr>
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td class="text light-bg" style="background-color: #f8cc00; color: #000000; font-family: Arial,sans-serif; font-size: 15px; line-height: 19px; mso-line-height-rule: exactly; padding: 13px 15px 3px; text-align: center; vertical-align: top;">
-                                                                <p style="Margin-bottom: 12px; Margin-top: 0;">Aliquam tincidunt mauris eu risus auctor dapibus</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table> 
-                                                </td>
-                                            </tr>
-                                        </table>      
-                                    </th><th width="195" style="display: inline-block; font-weight: 400; vertical-align: top; width: 195px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr style="border-collapse: collapse;">
-                                                <td class="column" style="padding: 10px; vertical-align: top;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td align="center" class="image-wrapper" style="vertical-align: top;">
-                                                                <img src="https://s3-eu-west-1.amazonaws.com/rkhleics/flybrid/example_d_2.jpeg" alt="" width="175" style="-ms-interpolation-mode: bicubic; display: block; height: auto; max-width: 100%; outline-style: none; text-decoration: none;">
-                                                            </td>
-                                                        </tr>
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td class="text light-bg" style="background-color: #f8cc00; color: #000000; font-family: Arial,sans-serif; font-size: 15px; line-height: 19px; mso-line-height-rule: exactly; padding: 13px 15px 3px; text-align: center; vertical-align: top;">
-                                                                <p style="Margin-bottom: 12px; Margin-top: 0;">Integer vitae libero</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th>
-                                </tr></tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr style="border-collapse: collapse;">
-                        <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_e" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">E) 2 uneven sized columns (inset, column order reversed)</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr style="border-collapse: collapse;">
-                        <td class="padded yellow-bg" style="background-color: #deb700; padding: 10px; vertical-align: top;">
-                            <table border="0" cellpadding="0" cellspacing="0" class="flybrid reverse-col-horizontal-order" width="100%" style="direction: rtl; display: block;">
-                                <tbody style="display: block; font-size: 0; text-align: center;"><tr style="border-collapse: collapse; display: inline;">
-                                    <!--[if (gte mso 9)|(IE)]><th width="385" style="width:385px"><!--><th width="385" style="direction: ltr; display: inline-block; font-weight: 400; max-width: 385px; vertical-align: top; width: 100%;"><!--<![endif]-->
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr style="border-collapse: collapse;">
-                                                <td class="column" style="padding: 10px; vertical-align: top;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td align="center" class="image-wrapper" style="vertical-align: top;">
-                                                                <img src="https://s3-eu-west-1.amazonaws.com/rkhleics/flybrid/example_e_1.jpeg" alt="" width="365" style="-ms-interpolation-mode: bicubic; display: block; height: auto; max-width: 100%; outline-style: none; text-decoration: none;">
-                                                            </td>
-                                                        </tr>
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td class="text light-bg" style="background-color: #f8cc00; color: #000000; font-family: Arial,sans-serif; font-size: 15px; line-height: 19px; mso-line-height-rule: exactly; padding: 13px 15px 3px; text-align: center; vertical-align: top;">
-                                                                <p style="Margin-bottom: 12px; Margin-top: 0;">Aliquam tincidunt mauris eu risus auctor dapibus</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table> 
-                                                </td>
-                                            </tr>
-                                        </table>      
-                                    </th><th width="195" style="direction: ltr; display: inline-block; font-weight: 400; vertical-align: top; width: 195px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr style="border-collapse: collapse;">
-                                                <td class="column" style="padding: 10px; vertical-align: top;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td align="center" class="image-wrapper" style="vertical-align: top;">
-                                                                <img src="https://s3-eu-west-1.amazonaws.com/rkhleics/flybrid/example_e_2.jpeg" alt="" width="175" style="-ms-interpolation-mode: bicubic; display: block; height: auto; max-width: 100%; outline-style: none; text-decoration: none;">
-                                                            </td>
-                                                        </tr>
-                                                        <tr style="border-collapse: collapse;">
-                                                            <td class="text light-bg" style="background-color: #f8cc00; color: #000000; font-family: Arial,sans-serif; font-size: 15px; line-height: 19px; mso-line-height-rule: exactly; padding: 13px 15px 3px; text-align: center; vertical-align: top;">
-                                                                <p style="Margin-bottom: 12px; Margin-top: 0;">Integer vitae libero</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </th>
-                                </tr></tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr style="border-collapse: collapse;">
-                        <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_f1" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">F1) 3 equal-width columns</td>
+                                    <td class="text" id="example_c1" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">C1) 3 columns</td>
                                 </tr>
                             </table>
                         </td>
@@ -573,7 +345,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_f2" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">F2) 3 equal-width columns (text-only)</td>
+                                    <td class="text" id="example_c2" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">C2) 3 columns (text-only)</td>
                                 </tr>
                             </table>
                         </td>
@@ -633,7 +405,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_g" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">G) 3 equal-width columns (inset)</td>
+                                    <td class="text" id="example_d" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">D) 3 columns (inset)</td>
                                 </tr>
                             </table>
                         </td>
@@ -708,7 +480,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_h" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">H) 3 equal-width columns (inset, multiple rows)</td>
+                                    <td class="text" id="example_e" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">E) 3 columns (inset, multiple rows)</td>
                                 </tr>
                             </table>
                         </td>
@@ -840,7 +612,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_i1" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">I1) 4 equal-width columns</td>
+                                    <td class="text" id="example_f1" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">F1) 4 columns</td>
                                 </tr>
                             </table>
                         </td>
@@ -934,7 +706,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_i2" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">I2) 4 equal-width columns (text-only)</td>
+                                    <td class="text" id="example_f2" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">F2) 4 columns (text-only)</td>
                                 </tr>
                             </table>
                         </td>
@@ -1008,7 +780,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_j" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">J) 4 equal-width columns (inset)</td>
+                                    <td class="text" id="example_g" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">G) 4 columns (inset)</td>
                                 </tr>
                             </table>
                         </td>
@@ -1102,7 +874,7 @@ h2 code{font-size:21px}
                         <td class="example-heading" style="padding-bottom: 15px; padding-top: 15px; vertical-align: top;">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr style="border-collapse: collapse;">
-                                    <td class="text" id="example_k" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">K) 4 equal-width columns (inset, multiple rows)</td>
+                                    <td class="text" id="example_h" style="background-color: #000000; color: #ffffff; font-family: Georgia,serif; font-size: 17px; line-height: 21px; mso-line-height-rule: exactly; padding: 15px; text-align: center; vertical-align: top;">H) 4 columns (inset, multiple rows)</td>
                                 </tr>
                             </table>
                         </td>

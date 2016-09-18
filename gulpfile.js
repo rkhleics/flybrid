@@ -47,6 +47,14 @@ gulp.task('dist-html-without-primer', function(){
 	.pipe(gulp.dest(config.distDir));
 });
 
+gulp.task('compile-flybrid-less', function(){
+	log("Compiling '_flybrid.less' to 'dist' directory");
+	return gulp.src('source/less/_flybrid.less')
+	.pipe(less())
+	.pipe(rename("flybrid.css"))
+	.pipe(gulp.dest(config.distDir));
+});
+
 gulp.task('compile-less', function(){
 	log("Compiling LESS and saving cleaned CSS to 'source' and 'dist' directories");
 	return gulp.src('source/less/style.less')
@@ -65,7 +73,7 @@ gulp.task('dist-html-inlined', ['dist-html-with-primer', 'dist-html-without-prim
 	.pipe(gulp.dest(config.distDir));
 });
 
-gulp.task('default', ['dist-html-with-primer', 'dist-html-without-primer', 'dist-html-inlined']);
+gulp.task('default', ['dist-html-inlined', 'compile-flybrid-less']);
 
 gulp.task('watch', function(){
 	gulp.watch(['source/**/*.less', 'source/*.html'], ['default']);

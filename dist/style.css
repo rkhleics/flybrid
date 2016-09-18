@@ -49,8 +49,6 @@ h2 code{font-size:21px}
 .footer{background-color:#777777;font-size:14px;font-family:Arial,sans-serif;color:#ffffff}
 .footer a{color:#ffffff}
 .container{max-width:600px}
-.reverse-col-horizontal-order{direction:rtl}
-.reverse-col-horizontal-order>tbody>tr>td,.reverse-col-horizontal-order>tbody>tr>th,.reverse-col-horizontal-order>tr>td,.reverse-col-horizontal-order>tr>th{direction:ltr}
 @media screen and (max-width:540px){.padded{padding-left:6px!important;padding-right:6px!important}
 }
 @media screen and (max-width:400px){.flybrid>tbody>tr>th.stretch-mobile{width:100%!important}

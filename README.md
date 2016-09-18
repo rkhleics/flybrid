@@ -1,38 +1,47 @@
 # What is flybrid?
 
-It's a demonstration and explanation of an approach for achieving 'fluid hybrid' layouts in HTML emails, without any unsightly conditional `<table>` code or additional `<div>` elements, or the confusing switch to using CSS `max-width` rules to control column widths, and the limitations that has when inner content doesn't quite 'push the columns out' to their intended size
+It's a simple, alternative approach for creating 'fluid-hybrid' layouts for HTML emails, that will work nicely alongside other fluid-hybrid techniques.
 
-For those who don't know, 'fluid-hybrid' is an HTML email design term, referring to a method of creating multi-column layouts that 'stack' nicely on smaller screens without the use `@media` queries (with `@media` queries often used to 'progressively enhance' the experience in email clients that support them). It's primarily based around the idea of using `text-align:center` on a container element, and `display:inline-block` on the columns you wish to stack, which in combination, makes the columns align to the centre of the container when stacked.
+Other fluid-hybrid approaches use complex combinations of tricks and hacks to achieve the desired effect. They are driven by a lot of smart thinking, but they are typically complex and difficult to implement quickly. For most layouts of two or more columns, flybrid will allow you to achieve comparable results with less code and complexity, helping you meet deadlines with your sanity intact.
 
-Nicole Merlin's article gives a fantastic explanation and demonstration of the overall idea / approach:
-http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+## Benefits
 
-Flybrid essentially provides similar results in the same email clients, but has been developed to make the technical implementation of the approach a little simpler and easier to understand. Sticking with `width` CSS rules to control column sizes also tends to produce more consistent results in Outlook.
+- No conditional `<table>` code or `<div>`s for each layout. Just a single `<table>` that breaks down in the right email clients.
+- No additional tricks or hacks are needed for targeting different clients - the included styles
+- Forget `max-width` CSS rules for layouts... control width using `width` again.
+- Less code, less maintenance, fewer headaches.
+- Lots of examples to copy from.
+- Well tested. [See the design test results for yourself »](https://www.emailonacid.com/app/acidtest/display/summary/02nvMlv0HNyCjHgYAoMovYuPS4Wb6f6MBS3gwlrMPiq8c/shared)
 
-## Known limitations
+## Limitations
 
-The switch to using the `width` CSS rule instead of a `width:100%` / `max-width` combination to control column widths, means than columns will not naturally shrink down to fit the screen when their natural width exceeds that of the screen (adding `max-width:100%` to the columns does not seem to work). For example, a `400px` wide column will remain `400px` wide on a `320px` display. You can override the width easily enough with `@media` queries for clients that support them. But, in clients that don't (most commonly Gmail for Android & iOS), the results will be less than ideal. This shouldn't be a problem for most multi-column layouts, as columns will quite often be narrower than the smallest screen you wish to support (iPhone5/5S at 320 pixels). However, if your layout has columns upwards of 300px wide (e.g. in a side / main column layout), you might want to consider using the approach discussed in Nicole Merlin's article instead.
+- Using flybrid, columns will not shrink to fit the viewport on smaller mobile devices (like they do with other fluid-hybrid techniques), so it's not suitable for ALL layouts. [Check out the design tests](https://www.emailonacid.com/app/acidtest/display/summary/02nvMlv0HNyCjHgYAoMovYuPS4Wb6f6MBS3gwlrMPiq8c/shared) to get a better idea of how flybrid can be used. 
 
-## Test results
+## Getting started
 
-Design test results for the current code can be found at: https://www.emailonacid.com/app/acidtest/display/summary/Nr9jCTqRpOzMjzxGG2tcs3QCXKJMhsG5TIh0iQU9aU1PL/shared
+First take a look at `[dist/with-primer.html]()`. Follow the guidelines in the primer at the top, and check out the examples provided to learn how it works. 
 
-## How do I use it?
+For the flybrid approach to work in an email, your email will need a fluid-hybrid compatible 'frame' that will resize automatically to fit the viewport. If you've developed fluid-hybrid emails before, you'll likely have something existing to copy from. If not, you can copy `dist/without-primer.html` to use as a starting point, or use one from elsewhere (such as from [Nicole Merlin's fluid-hybrid tutorial](https://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919))
 
-Download yourself a copy and look at `commented.html` in the `html` directory. It's both a working example, and a guide. Follow the rules explained within the comments, and you should know enough to modify the supplied code and use the technique within your own emails.
+The styles used by flybrid have been separated out to `dist/flybrid.css`, to make them easy to drop into your project.
 
-Before sending your email, it's intended that you use a CSS-Inliner tool to inline your CSS. `flybrid` has been developed using the following inliner tool from Campaign Monitor to prepare HTML before sending tests. Some CSS-Inliner tools work differently. So, for peace of mind, you'll probably want to use this too:
+### Remember to inline your styles before sending
+
+Before sending your email, you should use a tool to inline your CSS. `flybrid` has been developed using a [gulp](http://gulpjs.com/) workflow to automatically inline styles for testing (amongst other things). You may have your own 
 https://inliner.cm/
 
 Whatever technique you use to create your email. **ALWAYS TEST YOUR CODE BEFORE SENDING**.
 
+### More about 'fluid-hybrid'
+
+For those who don't know, 'fluid-hybrid' is an HTML email design term, referring to a method of creating multi-column layouts that 'stack' nicely on smaller screens without the use `@media` queries. It's primarily based around the idea of using `text-align:center` on a container element, and `display:inline-block` on the columns you wish to stack, which in combination, makes the columns align to the centre of the container when stacked.
+
+Nicole Merlin's article gives a fantastic explanation and demonstration of the overall idea / approach:
+http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+
+Stig Morten Myre also does a great job of explaining the fluid-hybrid approach used by Campaign Monitor in their templates here:
+https://medium.com/cm-engineering/coding-mobile-first-emails-1513ac4673e#.5qqm2t1at 
+
 ## Contributors
 
 **[Andy Babic](http://twitter.com/andyjbabic "I'm on twitter")**, Web Developer at [Rock Kitchen Harris](https://www.rkh.co.uk)
-
-## Building on the great work by
-
-**Nicole Merlin** at Email Wizardry and her great 'fluid hybrid' tutorial: http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
- 
-**Ros Hodgekiss** at Campaign Monitor, who originally posted about the 'fluid hybrid' approach in this article:
-https://www.campaignmonitor.com/blog/email-marketing/2014/07/creating-a-centred-responsive-design-without-media-queries/
