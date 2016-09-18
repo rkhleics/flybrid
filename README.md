@@ -11,7 +11,7 @@ Other fluid-hybrid approaches use complex combinations of tricks and hacks to ac
 - Forget `max-width` CSS rules - control width using `width` again.
 - Less code, less maintenance, fewer headaches.
 - Lots of examples to copy from.
-- Well tested. [See the design test results for yourself »](https://www.emailonacid.com/app/acidtest/display/summary/02nvMlv0HNyCjHgYAoMovYuPS4Wb6f6MBS3gwlrMPiq8c/shared)
+- Well tested, with great cross-client support. [See the results for yourself »](https://www.emailonacid.com/app/acidtest/display/summary/02nvMlv0HNyCjHgYAoMovYuPS4Wb6f6MBS3gwlrMPiq8c/shared)
 
 ### Limitations of flybrid
 
@@ -19,7 +19,7 @@ Other fluid-hybrid approaches use complex combinations of tricks and hacks to ac
 
 ## Getting started
 
-First take a look at [`dist/with-primer.html`](dist/with-primer.html)`. Follow the guidelines in the primer at the top, and check out the examples provided to learn how it works. 
+First take a look at [`dist/with-primer.html`](dist/with-primer.html). Follow the guidelines in the primer at the top, and check out the examples provided to learn how it works. 
 
 For the flybrid approach to work in an email, your email will need a fluid-hybrid compatible 'frame' that will resize automatically to fit the viewport. If you've developed fluid-hybrid emails before, you'll likely have something existing to copy from. If not, you can copy [`dist/without-primer.html`](dist/without-primer.html) to use as a starting point, or use one from elsewhere (such as from [Nicole Merlin's fluid-hybrid tutorial](https://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919))
 
