@@ -8,7 +8,7 @@ Other fluid-hybrid approaches use complex combinations of tricks and hacks to ac
 
 - No conditional `<table>` code or `<div>`s for each layout. Just a single `<table>` that breaks down in the right email clients.
 - No additional tricks or hacks are needed for targeting different clients - the included styles
-- Forget `max-width` CSS rules for layouts... control width using `width` again.
+- Forget `max-width` CSS rules - control width using `width` again.
 - Less code, less maintenance, fewer headaches.
 - Lots of examples to copy from.
 - Well tested. [See the design test results for yourself »](https://www.emailonacid.com/app/acidtest/display/summary/02nvMlv0HNyCjHgYAoMovYuPS4Wb6f6MBS3gwlrMPiq8c/shared)
