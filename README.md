@@ -7,7 +7,7 @@ Other fluid-hybrid approaches use complex combinations of tricks and hacks to ac
 ### Benefits of flybrid
 
 - No conditional `<table>` code or `<div>`s for each layout. Just a single `<table>` that breaks down in the right email clients.
-- No additional tricks or hacks are needed for targeting different clients - the included styles
+- No additional tricks or hacks are needed for targeting different clients. Should drop very easily into an existing fluid-hybrid template.
 - Forget `max-width` CSS rules - control width using `width` again.
 - Less code, less maintenance, fewer headaches.
 - Lots of examples to copy from.
