@@ -2,7 +2,7 @@
 
 It's a simple, alternative approach for creating 'fluid-hybrid' layouts for HTML emails, that will work nicely alongside other fluid-hybrid techniques.
 
-Other fluid-hybrid approaches use complex combinations of tricks and hacks to achieve the desired effect. They are driven by a lot of smart thinking, but they are typically complex and difficult to implement quickly. For most layouts of two or more columns, flybrid will allow you to achieve comparable results with less code and complexity, helping you meet deadlines with your sanity intact.
+Other fluid-hybrid approaches use complex combinations of tricks and hacks to achieve the desired effect. They are driven by a lot of smart thinking, but they are typically complex, difficult to implement quickly, and come with their own set of quirks. For most layouts of two or more columns, flybrid will allow you to achieve comparable results with less code and complexity, helping you meet deadlines with your sanity intact.
 
 ## Benefits
 
