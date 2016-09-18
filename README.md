@@ -27,8 +27,7 @@ The styles used by flybrid have been separated out to `dist/flybrid.css`, to mak
 
 ### Remember to inline your styles before sending
 
-Before sending your email, you should use a tool to inline your CSS. `flybrid` has been developed using a [gulp](http://gulpjs.com/) workflow to automatically inline styles for testing (amongst other things). You may have your own 
-https://inliner.cm/
+Before sending your email, you should use a tool to inline your CSS. `flybrid` has been developed using a [gulp](http://gulpjs.com/) workflow to automatically inline styles for testing (amongst other things). You may have your own automated workflow using gulp, grunt, or similar that you use for inlining, which should work fine. If not, Campaign Monitor has a great in-browser tool you can use: https://inliner.cm/
 
 Whatever technique you use to create your email. **ALWAYS TEST YOUR CODE BEFORE SENDING**.
 
