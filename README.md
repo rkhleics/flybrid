@@ -31,7 +31,7 @@ Before sending your email, you should use a tool to inline your CSS. `flybrid` h
 
 Whatever technique you use to create your email. **ALWAYS TEST YOUR CODE BEFORE SENDING**.
 
-### More about 'fluid-hybrid'
+## More about 'fluid-hybrid'
 
 For those who don't know, 'fluid-hybrid' is an HTML email design term, referring to a method of creating multi-column layouts that 'stack' nicely on smaller screens without the use `@media` queries. It's primarily based around the idea of using `text-align:center` on a container element, and `display:inline-block` on the columns you wish to stack, which in combination, makes the columns align to the centre of the container when stacked.
 
