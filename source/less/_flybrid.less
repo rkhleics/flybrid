@@ -1,44 +1,110 @@
 .flybrid {
     display: block;
-}
-/* When stacked, columns are center-aligned by default */
-.flybrid > tbody {
-    display: block;
-    text-align: center;
-    font-size: 0px;
-}
-/* Add these classes to change alignment to left or right */
-.stack-to-left > tbody {
-    text-align: left;
-}
-.stack-to-right > tbody {
-    text-align: right;
+
+    > tbody {
+        display: block;
+        text-align: center;
+        font-size: 0px;
+
+        > tr {
+            display: inline;
+
+            > th {
+                display: inline-block;
+            } 
+        }  
+    }
 }
 
-.flybrid > tbody > tr {
-    display: inline;
-}
-.flybrid > tbody > tr > th {
-    display: inline-block;
-} 
+@media screen and (max-width:@breakpoint-lg) {
 
-@media screen and (max-width:400px) {
-    /* Here, we force flybrid columns marked with a `.stretch-mobile` class to
-    100% width on mobile */
-    .flybrid > tbody > tr > th.stretch-mobile {
+    .two-cols > tbody > tr > th {
+        width: 50% !important; 
+    }
+
+    .three-cols > tbody > tr > th {
+        width: 33.3% !important;
+    }
+
+    .four-cols > tbody > tr > th {
+        width: 25% !important;
+    }
+
+}
+
+@media screen and (max-width:@breakpoint-md) {
+
+    .single-col-md,
+    .single-col-mobile {
+        > tbody > tr > th {
+            width: 100% !important;
+        }
+    }
+
+    .two-cols-md,
+    .two-cols-mobile {
+        > tbody > tr > th {
+            width: 50% !important;
+        }
+    }
+
+    .three-cols-md,
+    .three-cols-mobile {
+        > tbody > tr > th {
+            width: 33.3% !important;
+        }
+    }
+
+    .flybrid > tbody > tr {
+        > th.single-col-md,
+        > th.single-col-mobile {
+            width: 100% !important;
+        }
+    }
+
+}
+
+@media screen and (max-width:@breakpoint-sm) {
+
+    .single-col-sm > tbody > tr > th {
         width: 100% !important;
     }
+
+    .two-cols-sm > tbody > tr > th {
+        width: 50% !important;
+    }
+
+    .three-cols-sm > tbody > tr > th {
+        width: 33.3% !important;
+    }
+
+    .flybrid > tbody > tr > th.single-col-sm {
+        width: 100% !important;
+    }
+
+}
+
+@media screen and (max-width:@breakpoint-xs) {
+
+    .flybrid  > tbody > tr > th {
+        width: 100% !important;
+    }
+
 }
 
 @media screen and (min-width:1px) {
     /* Yahoo seems to want to add a 1px space around each cell. This
     fix removes that space in everything but IE10 and IE11 viewing the
     Yahoo webmail client. */
-    .flybrid > tbody > tr > th { margin: -1px !important; }
+    .flybrid > tbody > tr > th { 
+        margin: -1px !important; 
+    }
 }
 
 @media screen and (min-width:1px) and (max-width:3000px) {
     /* Yahoo can't read multi-feature media queries, so this style removes
      the negative margin applied above in everything but Yahoo. */
-    .flybrid > tbody > tr > th { margin: 0 !important; }
+    .flybrid > tbody > tr > th {
+        margin: 0 !important; 
+    }
 }
