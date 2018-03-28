@@ -1,56 +1,266 @@
-#backgroundTable,body,html{margin:0;padding:0}
-#outlook a,body,html{padding:0}
-#backgroundTable,.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td,.ExternalClass th{line-height:100%}
-.flybrid,img{display:block}
-.example-heading .text,.text,h2{mso-line-height-rule:exactly}
-body{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
-.ExternalClass{width:100%}
-#backgroundTable{width:100%;page-break-inside:avoid}
-img{max-width:100%;height:auto;outline-style:none;text-decoration:none;-ms-interpolation-mode:bicubic}
-.footer a,a{text-decoration:underline}
-tr{border-collapse:collapse}
-td,th{vertical-align:top}
-th{font-weight:400}
-.flybrid>tbody{display:block;text-align:center;font-size:0}
-.stack-to-left>tbody{text-align:left}
-.stack-to-right>tbody{text-align:right}
-.footer,.text{text-align:center}
-.flybrid>tbody>tr{display:inline}
-.flybrid>tbody>tr>th{display:inline-block}
-@media screen and (min-width:1px){.flybrid>tbody>tr>th{margin:-1px!important}
+/* Reset styles */
+html {
+  padding: 0;
+  margin: 0;
 }
-@media screen and (min-width:1px) and (max-width:3000px){.flybrid>tbody>tr>th{margin:0!important}
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
-#wrapper,body{background-color:#e3e3e3}
-.light-bg{background-color:#f2f2f2}
-.dark-bg{background-color:#aaaaaa}
-.yellow-bg{background-color:#deb700}
-.yellow-bg .light-bg{background-color:#f8cc00}
-.yellow-bg .dark-bg{background-color:#bf9e00}
-.green-bg{background-color:#6dd7b7}
-.green-bg .light-bg{background-color:#9de4cf}
-.green-bg .dark-bg{background-color:#36c69b}
-.blue-bg{background-color:#68aee3}
-.blue-bg .light-bg{background-color:#8fc3ea}
-.blue-bg .dark-bg{background-color:#3d97db}
-.white-bg{background-color:#ffffff}
-.image-cell{font-size:1px;line-height:1px}
-p{Margin-top:0;Margin-bottom:12px}
-a{color:#68aee3;font-weight:700}
-a:hover{color:#8fc3ea}
-code{font-family:Courier,monospace;background-color:#e4e4e4}
-.text{color:#000000;font-size:15px;font-family:Arial,sans-serif;padding:13px 15px 3px;line-height:19px}
-.example-heading{padding-top:15px;padding-bottom:15px}
-.example-heading .text{background-color:#000000;font-size:17px;font-family:Georgia,serif;color:#ffffff;text-align:center;padding:15px;line-height:21px}
-.primer{background:#ffffff;padding:2px 20px 15px}
-.column,.footer,.padded{padding:10px}
-h2{font-size:22px;font-weight:400;line-height:27px;Margin-top:28px;Margin-bottom:18px}
-h2 code{font-size:21px}
-.footer{background-color:#777777;font-size:14px;font-family:Arial,sans-serif;color:#ffffff}
-.footer a{color:#ffffff}
-.container{max-width:600px}
-@media screen and (max-width:540px){.padded{padding-left:6px!important;padding-right:6px!important}
+#outlook a {
+  padding: 0;
 }
-@media screen and (max-width:400px){.flybrid>tbody>tr>th.stretch-mobile{width:100%!important}
-.padded{padding-left:3px!important;padding-right:3px!important}
+.ExternalClass {
+  width: 100%;
 }
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass th,
+.ExternalClass div {
+  line-height: 100%;
+}
+#backgroundTable {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  line-height: 100%;
+  page-break-inside: avoid;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  outline-style: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+}
+tr {
+  border-collapse: collapse;
+}
+td,
+th {
+  vertical-align: top;
+}
+th {
+  font-weight: normal;
+}
+.flybrid {
+  display: block;
+}
+.flybrid > tbody {
+  display: block;
+  text-align: center;
+  font-size: 0px;
+}
+.flybrid > tbody > tr {
+  display: inline;
+}
+.flybrid > tbody > tr > th {
+  display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  .two-cols > tbody > tr > th {
+    width: 50% !important;
+  }
+  .three-cols > tbody > tr > th {
+    width: 33.3% !important;
+  }
+  .four-cols > tbody > tr > th {
+    width: 25% !important;
+  }
+}
+@media screen and (max-width: 520px) {
+  .single-col-md > tbody > tr > th,
+  .single-col-mobile > tbody > tr > th {
+    width: 100% !important;
+  }
+  .two-cols-md > tbody > tr > th,
+  .two-cols-mobile > tbody > tr > th {
+    width: 50% !important;
+  }
+  .three-cols-md > tbody > tr > th,
+  .three-cols-mobile > tbody > tr > th {
+    width: 33.3% !important;
+  }
+  .flybrid > tbody > tr > th.single-col-md,
+  .flybrid > tbody > tr > th.single-col-mobile {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .single-col-sm > tbody > tr > th {
+    width: 100% !important;
+  }
+  .two-cols-sm > tbody > tr > th {
+    width: 50% !important;
+  }
+  .three-cols-sm > tbody > tr > th {
+    width: 33.3% !important;
+  }
+  .flybrid > tbody > tr > th.single-col-sm {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .flybrid > tbody > tr > th {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 1px) {
+  /* Yahoo seems to want to add a 1px space around each cell. This
+    fix removes that space in everything but IE10 and IE11 viewing the
+    Yahoo webmail client. */
+  .flybrid > tbody > tr > th {
+    margin: -1px !important;
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 3000px) {
+  /* Yahoo can't read multi-feature media queries, so this style removes
+     the negative margin applied above in everything but Yahoo. */
+  .flybrid > tbody > tr > th {
+    margin: 0 !important;
+  }
+}
+body,
+#wrapper {
+  background-color: #e3e3e3;
+}
+.light-bg {
+  background-color: #f2f2f2;
+}
+.dark-bg {
+  background-color: #aaaaaa;
+}
+.yellow-bg {
+  background-color: #deb700;
+}
+.yellow-bg .light-bg {
+  background-color: #f8cc00;
+}
+.yellow-bg .dark-bg {
+  background-color: #bf9e00;
+}
+.green-bg {
+  background-color: #6dd7b7;
+}
+.green-bg .light-bg {
+  background-color: #9de4cf;
+}
+.green-bg .dark-bg {
+  background-color: #36c69b;
+}
+.blue-bg {
+  background-color: #68aee3;
+}
+.blue-bg .light-bg {
+  background-color: #8fc3ea;
+}
+.blue-bg .dark-bg {
+  background-color: #3d97db;
+}
+.white-bg {
+  background-color: #ffffff;
+}
+.image-cell {
+  font-size: 1px;
+  line-height: 1px;
+}
+p {
+  Margin-top: 0;
+  Margin-bottom: 12px;
+}
+a {
+  color: #68aee3;
+  font-weight: bold;
+  text-decoration: underline;
+}
+a:hover {
+  color: #8fc3ea;
+}
+code {
+  font-family: Courier, monospace;
+  background-color: #e4e4e4;
+}
+/* Text styles */
+.text {
+  color: #000000;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 13px 15px 3px;
+  mso-line-height-rule: exactly;
+  line-height: 19px;
+}
+.example-heading {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.example-heading .text {
+  background-color: #000000;
+  font-size: 17px;
+  font-family: Georgia, serif;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  mso-line-height-rule: exactly;
+  line-height: 21px;
+}
+.primer {
+  background: #ffffff;
+  padding: 2px 20px 15px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: normal;
+  mso-line-height-rule: exactly;
+  line-height: 27px;
+  Margin-top: 28px;
+  Margin-bottom: 18px;
+}
+h2 code {
+  font-size: 21px;
+}
+.footer {
+  background-color: #777777;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
+}
+.footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+/* Layout styles */
+.container {
+  max-width: 600px;
+}
+.column {
+  padding: 10px;
+}
+/* Flybrid table styles */
+.padded {
+  padding: 10px;
+}
+@media screen and (max-width: 540px) {
+  /* Here, we adjust the left and right padding slightly to give
+    the columns more room on smaller displays. */
+  .padded {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* Here we adjust the left and right padding a little bit more */
+  .padded {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
